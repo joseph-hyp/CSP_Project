@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { village } from "@/data/village";
 
 interface HeroProps {
   title: string;
@@ -22,11 +23,11 @@ export default function Hero({
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
             <span className="text-lg">🏘️</span>
-            Rampur Village • Rampur Mandal • Medak • Telangana
+            {village.name} &bull; {village.area} &bull; {village.district} &bull; {village.state}
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Welcome to{" "}
-            <span className="text-yellow-300">Rampur</span>
+            <span className="text-yellow-300">{village.name}</span>
           </h1>
           <p className="text-lg sm:text-xl text-primary-100 mb-8 leading-relaxed">
             {subtitle}

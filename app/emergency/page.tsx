@@ -96,44 +96,37 @@ const emergencyServices = [
 
 const localEmergencyContacts = [
   {
-    service: "Rampur Police Station",
-    number: "+91-9454XXXXXX",
+    service: "Local Police Station",
+    number: "To be verified",
     altNumber: "100 / 112",
-    inCharge: "SI Ramesh Babu",
+    inCharge: "To be verified",
     available: "24x7",
   },
   {
-    service: "PHC Rampur (Emergency)",
-    number: "+91-8455-2XXXXX",
+    service: "Nearest Health Centre",
+    number: "To be verified",
     altNumber: "108",
-    inCharge: "Dr. Rajesh Kumar (MO)",
+    inCharge: "To be verified",
     available: "24x7",
   },
   {
-    service: "108 Ambulance (Rampur)",
+    service: "108 Ambulance",
     number: "108",
-    altNumber: "+91-9450XXXXXX",
-    inCharge: "Stationed at PHC Rampur",
+    altNumber: "To be verified",
+    inCharge: "Stationed in Bheemunipatnam area",
     available: "24x7",
   },
   {
-    service: "Sarpanch - Rampur",
-    number: "+91-9440XXXXXX",
-    altNumber: "+91-8455-2XXXXX",
-    inCharge: "Smt. Lakshmi Reddy",
+    service: "Local Administration",
+    number: "To be verified",
+    altNumber: "To be verified",
+    inCharge: "To be verified",
     available: "Working Hours",
   },
   {
-    service: "Village Secretary",
-    number: "+91-9441XXXXXX",
-    altNumber: "+91-8455-2XXXXX",
-    inCharge: "Sri. Venkatesh Goud",
-    available: "Working Hours",
-  },
-  {
-    service: "Fire Station (Medak)",
+    service: "Fire Station (Bheemunipatnam)",
     number: "101",
-    altNumber: "+91-8452-2XXXXX",
+    altNumber: "To be verified",
     inCharge: "Station Fire Officer",
     available: "24x7",
   },
@@ -206,8 +199,8 @@ export default function EmergencyPage() {
       <section className="bg-slate-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            title="Local Emergency Contacts - Rampur"
-            subtitle="Direct numbers for emergency services in and around Rampur Village"
+            title="Local Emergency Contacts - Nammivanipeta"
+            subtitle="Direct numbers for emergency services in and around Nammivanipeta Village"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {localEmergencyContacts.map((item) => (
@@ -258,7 +251,7 @@ export default function EmergencyPage() {
               <li>Call <strong>108</strong> (Ambulance) immediately</li>
               <li>Keep the patient calm and comfortable</li>
               <li>Do not move the patient if spinal injury suspected</li>
-              <li>Go to PHC Rampur or District Hospital Medak</li>
+              <li>Go to nearest Health Centre or District Hospital</li>
               <li>Carry Aadhaar card and any medical documents</li>
             </ol>
           </div>
@@ -278,7 +271,7 @@ export default function EmergencyPage() {
               <li>Call <strong>100</strong> or <strong>112</strong> (Unified Emergency)</li>
               <li>Stay safe and move away from danger</li>
               <li>Note details: location, people involved, vehicle numbers</li>
-              <li>Call Rampur Police Station: +91-9454XXXXXX</li>
+              <li>Contact local police station immediately</li>
               <li>File FIR at nearest police station</li>
             </ol>
           </div>
@@ -297,7 +290,7 @@ export default function EmergencyPage() {
             <ol className="space-y-2 text-sm text-slate-600 list-decimal list-inside">
               <li>Call <strong>181</strong> (Women Helpline)</li>
               <li>Call <strong>100</strong> (Police) if in immediate danger</li>
-              <li>Use Disha App for SOS alert</li>
+              <li>Use official SOS apps for alert</li>
               <li>Report to nearest police station</li>
               <li>NGO helpline available for counselling</li>
             </ol>
@@ -307,7 +300,7 @@ export default function EmergencyPage() {
             <ol className="space-y-2 text-sm text-slate-600 list-decimal list-inside">
               <li>Call <strong>1098</strong> (Childline)</li>
               <li>Report missing child to police (100)</li>
-              <li>Child abuse: call 1098 or visit PHC</li>
+              <li>Child abuse: call 1098 or visit health centre</li>
               <li>Contact Anganwadi teacher for child welfare</li>
               <li>District Child Protection Unit available</li>
             </ol>

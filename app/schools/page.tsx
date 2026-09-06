@@ -5,7 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Schools",
-  description: "List of government schools, high schools, and educational institutions in and around Rampur Village.",
+  description: "List of government schools, high schools, and educational institutions in and around Nammivanipeta.",
 };
 
 export default function SchoolsPage() {
@@ -20,7 +20,7 @@ export default function SchoolsPage() {
             </h1>
             <p className="text-lg text-primary-100">
               Government schools, high schools, and educational institutions
-              serving the students of Rampur Village
+              serving the students of Nammivanipeta
             </p>
           </div>
         </div>
@@ -29,33 +29,27 @@ export default function SchoolsPage() {
       {/* Schools in Village */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <SectionTitle
-          title="Schools in Rampur Village"
-          subtitle={`${schools.length} educational institutions within the village`}
+          title="Schools & Educational Institutions"
+          subtitle="Nammivanipeta and nearby area"
         />
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 text-center">
-            <div className="text-2xl font-bold text-primary-600">
-              {schools.filter((s) => s.type === "government").length}
-            </div>
+            <div className="text-2xl font-bold text-primary-600">2</div>
             <div className="text-sm text-slate-600 mt-1">Govt. Schools</div>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 text-center">
-            <div className="text-2xl font-bold text-primary-600">
-              {schools.reduce((sum, s) => sum + parseInt(s.studentStrength), 0)}
-            </div>
-            <div className="text-sm text-slate-600 mt-1">Total Students</div>
+            <div className="text-2xl font-bold text-primary-600">1,307</div>
+            <div className="text-sm text-slate-600 mt-1">Context: CSP Field Survey voters</div>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 text-center">
-            <div className="text-2xl font-bold text-primary-600">
-              {schools.filter((s) => s.level === "pre-primary").length}
-            </div>
+            <div className="text-2xl font-bold text-primary-600">2</div>
             <div className="text-sm text-slate-600 mt-1">Anganwadi Centres</div>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 text-center">
-            <div className="text-2xl font-bold text-primary-600">100%</div>
-            <div className="text-sm text-slate-600 mt-1">SSC Pass (2023)</div>
+            <div className="text-2xl font-bold text-primary-600">GVMC & Ameya</div>
+            <div className="text-sm text-slate-600 mt-1">Educational Institutions</div>
           </div>
         </div>
 
@@ -71,7 +65,7 @@ export default function SchoolsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Nearby Schools & Colleges"
-            subtitle="Higher education institutions accessible from Rampur"
+            subtitle="Higher education institutions accessible from Nammivanipeta"
           />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {nearbySchools.map((school) => (
@@ -89,21 +83,11 @@ export default function SchoolsPage() {
             <h3 className="font-semibold text-slate-900 mb-3">📚 Mid-Day Meal (MDM)</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
               Free nutritious lunch provided to all students in government schools
-              (Classes I-X). Cooked meals served on all working days. Menu planned
-              as per MDM guidelines with weekly variety including eggs, vegetables,
-              and pulses.
+              (Classes I-V). Cooked meals served on all working days as per MDM guidelines.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-            <h3 className="font-semibold text-slate-900 mb-3">💻 Digital Education</h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Smart class rooms with digital boards available in ZPHS and 3 MPPS
-              schools. Computer labs with internet access. Digital India initiatives
-              including DIKSHA platform and e-textbooks.
-            </p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-            <h3 className="font-semibold text-slate-900 mb-3">🎓 Scholarships</h3>
+            <h3 className="font-semibold text-slate-900 mb-3">📚 Scholarships</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
               Various scholarships available for SC/ST/BC/Minority students including
               Post-Matric Scholarship, Pre-Matric Scholarship, and National Means

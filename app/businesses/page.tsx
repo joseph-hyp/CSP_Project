@@ -31,7 +31,7 @@ export default function BusinessesPage() {
               Local Business Directory
             </h1>
             <p className="text-lg text-primary-100">
-              Shops, services, and businesses in and around Rampur Village
+              Shops, services, and businesses in and around Nammivanipeta Village
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function BusinessesPage() {
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
-                <span>{cat.icon}</span>
+                <span className="text-xs">{cat.icon}</span>
                 {cat.label}
               </button>
             ))}
@@ -124,10 +124,10 @@ export default function BusinessesPage() {
             ℹ️ Business Directory Information
           </h3>
           <p className="text-sm text-blue-700 leading-relaxed">
-            This directory lists businesses that operate in Rampur Village. Information
-            is provided for public reference only. Business owners can request updates
-            or corrections by contacting the Gram Panchayat office. Always verify
-            business details before visiting.
+            This directory lists businesses that operate in Nammivanipeta Village.
+            Information is provided for public reference only. Business owners
+            can request updates or corrections by contacting the local administrative
+            office. Always verify business details before visiting.
           </p>
         </div>
       </section>

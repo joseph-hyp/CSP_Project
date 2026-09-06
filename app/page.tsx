@@ -14,7 +14,7 @@ const quickLinks = [
     href: "/contacts",
     icon: "📞",
     title: "Important Contacts",
-    description: "Panchayat, revenue, education, health and police contacts",
+    description: "Education, health, police and utility emergency contacts",
     color: "bg-green-50 hover:bg-green-100",
     iconBg: "bg-green-100",
   },
@@ -22,7 +22,7 @@ const quickLinks = [
     href: "/schools",
     icon: "🏫",
     title: "Schools",
-    description: "Government schools, high schools, and educational institutions",
+    description: "Government schools and educational institutions",
     color: "bg-purple-50 hover:bg-purple-100",
     iconBg: "bg-purple-100",
   },
@@ -30,7 +30,7 @@ const quickLinks = [
     href: "/health",
     icon: "🏥",
     title: "Health Services",
-    description: "PHC, sub-centres, hospitals, and health programs",
+    description: "Health facilities, emergency numbers, and health programs",
     color: "bg-red-50 hover:bg-red-100",
     iconBg: "bg-red-100",
   },
@@ -61,11 +61,11 @@ export default function HomePage() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span className="text-lg">🏘️</span>
-              Rampur Village • Rampur Mandal • Medak • Telangana
+              Nammivanipeta &bull; Bheemunipatnam/Bheemili &bull; Visakhapatnam &bull; Andhra Pradesh
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Welcome to{" "}
-              <span className="text-yellow-300">Rampur</span>
+              <span className="text-yellow-300">Nammivanipeta</span>
             </h1>
             <p className="text-lg sm:text-xl text-primary-100 mb-8 leading-relaxed">
               {village.description}
@@ -91,25 +91,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats */}
+      {/* Quick Stats - CSP Field Survey Data */}
       <section className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center mb-4">
+            <span className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 text-xs font-semibold rounded-full">
+              CSP Field Survey Data
+            </span>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-primary-600">{village.population}</div>
               <div className="text-sm text-slate-600 mt-1">Population</div>
+              <div className="text-xs text-slate-400 mt-0.5">CSP Field Survey</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary-600">{village.area}</div>
-              <div className="text-sm text-slate-600 mt-1">Area</div>
+              <div className="text-3xl font-bold text-primary-600">{village.households}</div>
+              <div className="text-sm text-slate-600 mt-1">Households</div>
+              <div className="text-xs text-slate-400 mt-0.5">CSP Field Survey</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary-600">{village.facilities.length}</div>
-              <div className="text-sm text-slate-600 mt-1">Key Facilities</div>
+              <div className="text-3xl font-bold text-primary-600">{village.voters}</div>
+              <div className="text-sm text-slate-600 mt-1">Registered Voters</div>
+              <div className="text-xs text-slate-400 mt-0.5">CSP Field Survey</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary-600">{village.established}</div>
-              <div className="text-sm text-slate-600 mt-1">Established</div>
+              <div className="text-3xl font-bold text-primary-600">{village.governmentSchools}</div>
+              <div className="text-sm text-slate-600 mt-1">Govt. Schools</div>
+              <div className="text-xs text-slate-400 mt-0.5">CSP Field Survey</div>
             </div>
           </div>
         </div>
@@ -122,7 +131,7 @@ export default function HomePage() {
             Village Information Hub
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Find everything you need about Rampur Village in one place
+            Find everything you need about Nammivanipeta in one place
           </p>
           <div className="mt-3 h-1 w-16 bg-primary-600 rounded-full mx-auto"></div>
         </div>
@@ -148,55 +157,97 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Village Highlights */}
+      {/* Village at a Glance - Community Infrastructure */}
       <section className="bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Main Occupations */}
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
-                Our Village at a Glance
-              </h2>
-              <div className="space-y-4">
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <h3 className="font-semibold text-slate-900 mb-2">📍 Location</h3>
-                  <p className="text-sm text-slate-600">
-                    {village.name}, {village.mandal}, {village.district} District, {village.state} - {village.pincode}
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <h3 className="font-semibold text-slate-900 mb-2">🏛️ Governance</h3>
-                  <p className="text-sm text-slate-600">{village.governance}</p>
-                </div>
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <h3 className="font-semibold text-slate-900 mb-2">💰 Main Occupations</h3>
-                  <ul className="space-y-1">
-                    {village.mainOccupations.map((occ, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
-                        <span className="text-primary-500">•</span>
-                        {occ}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">
+              Village at a Glance
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Key statistics from the CSP field survey
+            </p>
+            <div className="mt-3 h-1 w-16 bg-primary-600 rounded-full mx-auto"></div>
+          </div>
 
-            {/* Right: Key Facilities */}
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Key Facilities</h3>
-              <div className="grid grid-cols-2 gap-2">
-                {village.facilities.map((facility, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-2 bg-white rounded-lg p-3 shadow-sm border border-slate-100 text-sm text-slate-700"
-                  >
-                    <span className="text-primary-500">✓</span>
-                    {facility}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Community Infrastructure */}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Community Infrastructure</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Overhead Tank", value: "1" },
+                  { label: "Public Taps", value: "16" },
+                  { label: "Household Taps", value: "240" },
+                  { label: "Hand Pumps", value: "16" },
+                  { label: "Apartments", value: "21" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between bg-slate-50 rounded-lg px-4 py-3">
+                    <span className="text-sm text-slate-700">{item.label}</span>
+                    <span className="text-lg font-bold text-primary-600">{item.value}</span>
                   </div>
                 ))}
               </div>
+              <div className="mt-3 text-xs text-slate-400">CSP Field Survey</div>
             </div>
+
+            {/* Household Services */}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Household Services</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Pucca Houses", value: "1,380" },
+                  { label: "Kutcha Houses", value: "75" },
+                  { label: "Electricity Connections", value: "1,320" },
+                  { label: "LPG Connections", value: "1,345" },
+                  { label: "Rice Cards", value: "920" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between bg-slate-50 rounded-lg px-4 py-3">
+                    <span className="text-sm text-slate-700">{item.label}</span>
+                    <span className="text-lg font-bold text-primary-600">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 text-xs text-slate-400">CSP Field Survey</div>
+            </div>
+
+            {/* Electoral Profile */}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Electoral Profile</h3>
+              <div className="space-y-3">
+                {[
+                  { label: "Registered Voters", value: "1,307" },
+                  { label: "Male Voters", value: "654" },
+                  { label: "Female Voters", value: "653" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between bg-slate-50 rounded-lg px-4 py-3">
+                    <span className="text-sm text-slate-700">{item.label}</span>
+                    <span className="text-lg font-bold text-primary-600">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 text-xs text-slate-400">CSP Field Survey</div>
+
+              <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                <h4 className="font-semibold text-green-800 text-sm mb-2">Location</h4>
+                <p className="text-sm text-green-700">
+                  Nammivanipeta, Sangivalasa<br />
+                  Bheemunipatnam/Bheemili area<br />
+                  Visakhapatnam, Andhra Pradesh<br />
+                  PIN: 531162
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Data Note */}
+          <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+            <h3 className="font-semibold text-yellow-800 mb-2">
+              Data Note
+            </h3>
+            <p className="text-sm text-yellow-700 leading-relaxed">
+              Village-level figures shown on this portal are based primarily on information collected for the Community Service Project field survey and selected publicly available government sources. Some figures may require verification with the relevant local authority before being used for official purposes.
+            </p>
           </div>
         </div>
       </section>
@@ -248,13 +299,14 @@ export default function HomePage() {
           <p className="text-slate-600 max-w-2xl mx-auto mb-6 leading-relaxed">
             This Village Information Portal is a Community Service Project (CSP) designed to bring
             all important village information to one accessible place. It is built to serve the
-            residents of Rampur and surrounding areas.
+            residents of Nammivanipeta and surrounding areas using field-survey information and
+            publicly available government data.
           </p>
           <Link
             href="/about"
             className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
           >
-            Learn More About Rampur
+            Learn More About Nammivanipeta
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

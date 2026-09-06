@@ -30,7 +30,7 @@ export default function SchemesPage() {
             </h1>
             <p className="text-lg text-primary-100">
               Central and State government schemes available for the residents
-              of Rampur Village
+              of Nammivanipeta Village
             </p>
           </div>
         </div>

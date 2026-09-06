@@ -2,86 +2,63 @@ export interface VillageInfo {
   name: string;
   tagline: string;
   description: string;
-  mandal: string;
+  area: string;
   district: string;
   state: string;
   pincode: string;
   population: string;
-  area: string;
-  mainOccupations: string[];
-  facilities: string[];
+  households: string;
+  voters: string;
+  maleVoters: string;
+  femaleVoters: string;
+  governmentSchools: string;
   location: {
-    latitude: number;
-    longitude: number;
     mapLink: string;
   };
   contact: {
-    email: string;
-    phone: string;
     address: string;
   };
-  established: string;
   governance: string;
 }
 
 export const village: VillageInfo = {
-  name: "Rampur",
-  tagline: "A Progressive Village in the Heart of Rural India",
+  name: "Nammivanipeta",
+  tagline: "Village Information Portal — Community Service Project",
   description:
-    "Rampur is a vibrant village known for its agricultural heritage, strong community bonds, and progressive outlook. With a population of over 5,000 residents, the village has made significant strides in education, healthcare, and digital connectivity while preserving its cultural traditions.",
-  mandal: "Rampur Mandal",
-  district: "Medak",
-  state: "Telangana",
-  pincode: "502101",
-  population: "5,240 (2021 Census)",
-  area: "1,245 hectares",
-  mainOccupations: [
-    "Agriculture (Paddy, Cotton, Maize)",
-    "Dairy Farming",
-    "Handloom Weaving",
-    "Small-scale Retail",
-    "Government Services",
-  ],
-  facilities: [
-    "Gram Panchayat Office",
-    "Primary Health Centre (PHC)",
-    "Government High School",
-    "Anganwadi Centres (3)",
-    "Public Distribution System (PDS) Shop",
-    "Veterinary Hospital",
-    "Post Office",
-    "Bank Branch (SBI)",
-    "Common Service Centre (CSC)",
-    "Community Hall",
-    "Sports Ground",
-    "Library",
-  ],
+    "Welcome to the Nammivanipeta Village Information Portal. This Community Service Project brings important information about the village, education, public services, community infrastructure, government schemes and local facilities together in one simple digital platform.",
+  area: "Bheemunipatnam/Bheemili area",
+  district: "Visakhapatnam",
+  state: "Andhra Pradesh",
+  pincode: "531162",
+  population: "3,541",
+  households: "1,455",
+  voters: "1,307",
+  maleVoters: "654",
+  femaleVoters: "653",
+  governmentSchools: "2",
   location: {
-    latitude: 18.0452,
-    longitude: 78.2588,
-    mapLink: "https://maps.google.com/?q=18.0452,78.2588",
+    mapLink:
+      "https://www.google.com/maps/search/Nammivanipeta+Bheemunipatnam+Visakhapatnam+Andhra+Pradesh",
   },
   contact: {
-    email: "rampur.gramapanchayat@telangana.gov.in",
-    phone: "+91-8455-2XXXXX",
-    address: "Gram Panchayat Office, Main Road, Rampur - 502101",
+    address:
+      "Nammivanipeta, Sangivalasa, Bheemunipatnam area, Visakhapatnam, Andhra Pradesh - 531162",
   },
-  established: "1952",
-  governance: "Gram Panchayat (Sarpanch + 12 Ward Members)",
+  governance: "Local Administrative Body (Bheemunipatnam/Bheemili area)",
 };
 
 export const siteMetadata = {
-  title: "Rampur Village Information Portal",
+  title: "Nammivanipeta Village Information Portal",
   description:
-    "Official information portal for Rampur Village - Government schemes, schools, health services, contacts, local businesses, and emergency numbers.",
+    "Community Service Project information portal for Nammivanipeta — Government schemes, schools, health services, contacts, local businesses, and emergency numbers.",
   keywords: [
-    "Rampur village",
+    "Nammivanipeta village",
     "village information",
     "government schemes",
-    "rural development",
-    "panchayat",
-    "Telangana villages",
+    "community service project",
+    "CSP",
+    "Andhra Pradesh villages",
   ],
-  url: "https://rampur-village-portal.vercel.app",
+  url: "https://csp-project-sage.vercel.app",
   ogImage: "/images/village-og.jpg",
 };

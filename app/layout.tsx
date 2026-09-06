@@ -4,45 +4,44 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://csp-project-sage.vercel.app"),
   title: {
-    default: "Rampur Village Information Portal",
-    template: "%s | Rampur Village Portal",
+    default: "Nammivanipeta Village Information Portal",
+    template: "%s | Nammivanipeta Village Portal",
   },
   description:
-    "Official information portal for Rampur Village — Government schemes, schools, health services, contacts, local businesses, and emergency numbers.",
+    "Community Service Project information portal for Nammivanipeta — Government schemes, schools, health services, contacts, local businesses, and emergency numbers.",
   keywords: [
-    "Rampur village",
+    "Nammivanipeta village",
     "village information",
     "government schemes",
-    "rural development",
-    "panchayat",
-    "Telangana villages",
     "community service project",
     "CSP",
+    "Andhra Pradesh villages",
   ],
   authors: [{ name: "CSP Team" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://rampur-village-portal.vercel.app",
-    siteName: "Rampur Village Portal",
-    title: "Rampur Village Information Portal",
+    url: "https://csp-project-sage.vercel.app",
+    siteName: "Nammivanipeta Village Portal",
+    title: "Nammivanipeta Village Information Portal",
     description:
-      "Comprehensive information about Rampur Village — schemes, schools, health, contacts, and local businesses.",
+      "Community Service Project information portal for Nammivanipeta — schemes, schools, health, contacts, and local businesses.",
     images: [
       {
         url: "/images/village-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Rampur Village Portal",
+        alt: "Nammivanipeta Village Portal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rampur Village Information Portal",
+    title: "Nammivanipeta Village Information Portal",
     description:
-      "Comprehensive information about Rampur Village — schemes, schools, health, contacts, and local businesses.",
+      "Community Service Project information portal for Nammivanipeta — schemes, schools, health, contacts, and local businesses.",
     images: ["/images/village-og.jpg"],
   },
   robots: {
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://rampur-village-portal.vercel.app",
+    canonical: "https://csp-project-sage.vercel.app",
   },
 };
 
