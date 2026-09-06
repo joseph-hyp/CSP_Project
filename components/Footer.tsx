@@ -29,11 +29,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🏘️</span>
-              <span className="text-xl font-bold text-white">Rampur Village</span>
+              <span className="text-xl font-bold text-white">Nammivanipeta Village</span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
               A comprehensive information portal for the residents and visitors of
-              Rampur Village, Rampur Mandal, Medak District, Telangana.
+              Nammivanipeta, Visakhapatnam, Andhra Pradesh.
             </p>
             <p className="text-sm text-slate-400">
               Built as a Community Service Project (CSP) to bridge the digital
@@ -83,15 +83,15 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-slate-500">
-            <p>© 2024 Rampur Village Portal. All information is publicly available.</p>
+            <p>© 2026 Nammivanipeta Village Information Portal. Community Service Project.</p>
             <p>
               <a
-                href="https://telangana.gov.in"
+                href="https://www.ap.gov.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                Government of Telangana
+                Government of Andhra Pradesh
               </a>
             </p>
           </div>

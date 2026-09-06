@@ -21,8 +21,8 @@ export default function ContactsPage() {
               Important Contacts
             </h1>
             <p className="text-lg text-primary-100">
-              Official and public contact numbers for government offices, schools,
-              health centres, police, and utilities in and around Rampur
+              Public contact numbers for education, health, police,
+              and utilities in and around Nammivanipeta
             </p>
           </div>
         </div>
@@ -59,6 +59,21 @@ export default function ContactsPage() {
           {filteredContacts.map((contact) => (
             <ContactCard key={contact.id} contact={contact} />
           ))}
+        </div>
+      </section>
+
+      {/* Note */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h3 className="font-semibold text-yellow-800 mb-2">
+            Contact Information Note
+          </h3>
+          <p className="text-sm text-yellow-700 leading-relaxed">
+            Contact details shown here include verified public emergency numbers and
+            general service categories. Specific local contact details will be updated
+            after field verification. Please verify details through official sources
+            before use.
+          </p>
         </div>
       </section>
     </div>

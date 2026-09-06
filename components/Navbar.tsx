@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl">🏘️</span>
               <span className="text-lg font-bold text-slate-900 hidden sm:block">
-                Rampur
+                Nammivanipeta
               </span>
             </Link>
           </div>

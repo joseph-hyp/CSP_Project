@@ -5,7 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Health Services",
-  description: "PHC, health sub-centres, hospitals, emergency numbers, and health programmes available in and around Rampur Village.",
+  description: "PHC, health sub-centres, hospitals, emergency numbers, and health programmes available in and around Nammivanipeta.",
 };
 
 export default function HealthPage() {
@@ -19,8 +19,8 @@ export default function HealthPage() {
               Health Services
             </h1>
             <p className="text-lg text-red-100">
-              Primary Health Centre, health sub-centres, emergency contacts, and
-              health programmes serving Rampur and surrounding villages
+              Primary health care services, emergency contacts, and
+              health programmes serving Nammivanipeta and surrounding areas
             </p>
           </div>
         </div>
@@ -50,8 +50,8 @@ export default function HealthPage() {
       {/* Health Facilities */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <SectionTitle
-          title="Health Facilities in Rampur"
-          subtitle="Primary health care services available within the village"
+          title="Health Facilities"
+          subtitle="Primary health care services accessible from Nammivanipeta"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
@@ -66,7 +66,7 @@ export default function HealthPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Nearby Hospitals & Specialist Care"
-            subtitle="For specialised treatment beyond PHC services"
+            subtitle="For specialised treatment beyond local health centres"
           />
           <div className="space-y-6">
             {nearbyHospitals.map((hospital) => (
@@ -119,7 +119,7 @@ export default function HealthPage() {
 
       {/* Health Programs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <SectionTitle title="Health Programmes" subtitle="Government health initiatives available at PHC Rampur" />
+        <SectionTitle title="Health Programmes" subtitle="Government health initiatives available" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {healthPrograms.map((program, idx) => (
             <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
@@ -155,7 +155,7 @@ export default function HealthPage() {
               <h3 className="font-semibold text-slate-900 mb-2">💉 Vaccination</h3>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Ensure all children receive immunisation as per the Universal
-                Immunization Programme. Visit PHC or Anganwadi on designated
+                Immunization Programme. Visit local health centre or Anganwadi on designated
                 Vaccination Days (VHND). Adults should also get boosters as needed.
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function HealthPage() {
               <h3 className="font-semibold text-slate-900 mb-2">🐛 Malaria Prevention</h3>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Use mosquito nets while sleeping. Keep surroundings clean and dry.
-                Report to PHC immediately if you have fever with chills. Get tested
+                Report to health centre immediately if you have fever with chills. Get tested
                 for malaria within 24 hours of fever onset.
               </p>
             </div>
